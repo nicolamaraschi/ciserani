@@ -48,7 +48,7 @@ const Specializations = () => {
     {
       icon: <Scissors size={28} />,
       title: "Chirurgia Orale",
-      image: "/Chirurgia Orale.png",
+      image: "/chirurgia.png",
       content: "Interventi in ambiente sicuro e confortevole: ottavi inclusi, denti sovranumerari, apicectomie e cisti."
     }
   ];

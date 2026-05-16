@@ -3,76 +3,108 @@ import { History, Target, Award } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="pt-32 pb-24">
+    <div className="pt-32 pb-24 bg-white">
       {/* Header */}
-      <section className="max-w-7xl mx-auto px-6 mb-24 text-center">
+      <section className="max-w-7xl mx-auto px-6 mb-16 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <span className="text-xs font-bold uppercase tracking-[0.4em] text-slate-400 mb-6 block">La Nostra Storia</span>
-          <h1 className="text-5xl md:text-6xl font-serif text-slate-900 mb-8">
-            Dal 1979, una passione <br /> tramandata tra <span className="italic">generazioni</span>.
+          <h1 className="text-5xl md:text-7xl font-serif text-slate-900 mb-8 leading-tight">
+            Dal 1979, una passione <br /> tramandata tra <span className="italic text-slate-500">generazioni</span>.
           </h1>
         </motion.div>
       </section>
 
+      {/* Prominent Hero Image */}
+      <section className="max-w-7xl mx-auto px-6 mb-32">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="w-full aspect-[16/9] md:aspect-[21/9] rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200/50 relative group"
+        >
+          <img 
+            src="/studio ciserani.png" 
+            alt="Studio Ciserani Storia e Team" 
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+            onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
+          />
+          <div className="absolute inset-0 hidden items-center justify-center bg-slate-100 text-slate-400 italic">
+            [Immagine Studio Ciserani]
+          </div>
+        </motion.div>
+      </section>
+
       {/* Story Content */}
-      <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center mb-32">
-        <div className="aspect-[4/5] bg-slate-100 rounded-3xl overflow-hidden flex items-center justify-center text-slate-300 italic">
-          {/* USER: Inserire qui una foto storica o ritratto del Dott. Paolo e Roberto */}
-          [Foto Team / Storia]
-        </div>
-        <div className="space-y-10">
-          <div className="flex gap-6">
-            <div className="shrink-0 w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-slate-900">
-              <History size={24} />
+      <section className="max-w-4xl mx-auto px-6 mb-32">
+        <div className="space-y-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row gap-8 items-start bg-slate-50 p-10 rounded-3xl"
+          >
+            <div className="shrink-0 w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-900">
+              <History size={32} />
             </div>
             <div>
-              <h3 className="text-xl font-serif mb-4">Le Origini</h3>
-              <p className="text-slate-500 leading-relaxed">
-                Era il 1979 quando è nata l’avventura dello Studio Ciserani. Il padre Paolo, dopo anni di lavoro come odontotecnico e raggiunta la laurea in medicina, ha messo a frutto la sua formazione protesica per risolvere le situazioni dentali più complesse.
+              <h3 className="text-2xl font-serif mb-4 text-slate-900">Le Origini</h3>
+              <p className="text-slate-500 leading-relaxed text-lg">
+                Era il 1979 quando è nata l’avventura dello Studio Ciserani. Il padre Paolo, dopo anni di lavoro come odontotecnico e raggiunta la laurea in medicina, ha messo a frutto la sua formazione protesica per risolvere le situazioni dentali più complesse, diventando presto un punto di riferimento nel quartiere.
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex gap-6">
-            <div className="shrink-0 w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-slate-900">
-              <Award size={24} />
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row gap-8 items-start bg-slate-50 p-10 rounded-3xl"
+          >
+            <div className="shrink-0 w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-900">
+              <Award size={32} />
             </div>
             <div>
-              <h3 className="text-xl font-serif mb-4">La Continuità</h3>
-              <p className="text-slate-500 leading-relaxed">
-                Il giovane Roberto, già all’età di 13 anni, frequentava il laboratorio e lo studio, apprendendo i primi rudimenti. Nel 1991, con il conseguimento della laurea in odontoiatria, è stata tracciata la via definitiva.
+              <h3 className="text-2xl font-serif mb-4 text-slate-900">La Continuità</h3>
+              <p className="text-slate-500 leading-relaxed text-lg">
+                Il giovane Roberto, già all’età di 13 anni, frequentava il laboratorio e lo studio, apprendendo i primi rudimenti, imparando l'importanza del dettaglio e dell'accoglienza al paziente. Nel 1991, con il conseguimento della laurea in odontoiatria, è stata tracciata la via definitiva per la seconda generazione dello studio.
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex gap-6">
-            <div className="shrink-0 w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-slate-900">
-              <Target size={24} />
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row gap-8 items-start bg-slate-50 p-10 rounded-3xl"
+          >
+            <div className="shrink-0 w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-900">
+              <Target size={32} />
             </div>
             <div>
-              <h3 className="text-xl font-serif mb-4">La Visione Oggi</h3>
-              <p className="text-slate-500 leading-relaxed">
-                Da allora, corsi, consulenze e aggiornamenti continui: tutto è stato impostato per un solo risultato. L’eccellenza non ammette scuse. Oggi lo studio è un punto di riferimento per l'odontoiatria di alta qualità a Milano.
+              <h3 className="text-2xl font-serif mb-4 text-slate-900">La Visione Oggi</h3>
+              <p className="text-slate-500 leading-relaxed text-lg">
+                Da allora, corsi, consulenze e aggiornamenti continui: tutto è stato impostato per un solo risultato. L’eccellenza non ammette scuse. Oggi lo studio unisce la profonda esperienza di ieri alle tecnologie più avanzate di oggi, garantendo cure di altissimo livello.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Quote */}
-      <section className="bg-slate-50 py-24">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <span className="text-4xl text-slate-300 font-serif mb-8 block font-bold italic">“</span>
-          <h2 className="text-3xl font-serif text-slate-800 leading-snug mb-10 italic">
+      <section className="bg-slate-900 text-white py-32 rounded-[3rem] mx-6 mb-12 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 translate-x-1/2"></div>
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <span className="text-6xl text-white/20 font-serif mb-8 block font-bold italic">“</span>
+          <h2 className="text-3xl md:text-4xl font-serif leading-snug mb-12 italic">
             L'eccellenza non è un atto, ma un'abitudine. In ogni sorriso che curiamo, mettiamo quarant'anni di esperienza e la tecnologia di domani.
           </h2>
           <div className="flex flex-col items-center">
-            <div className="w-16 h-px bg-slate-200 mb-6"></div>
-            <p className="text-sm font-bold uppercase tracking-widest text-slate-900">Dott. Roberto Ciserani</p>
+            <div className="w-16 h-px bg-white/20 mb-6"></div>
+            <p className="text-sm font-bold uppercase tracking-widest text-white">Dott. Roberto Ciserani</p>
             <p className="text-xs text-slate-400 mt-2 uppercase tracking-widest">Titolare dello Studio</p>
           </div>
         </div>
