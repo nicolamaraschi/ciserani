@@ -5,27 +5,24 @@ const About = () => {
   return (
     <div className="pt-32 pb-24 bg-white">
       {/* Header */}
-      <section className="max-w-7xl mx-auto px-6 mb-16 text-center">
+      <section className="max-w-7xl mx-auto px-6 mb-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <span className="text-xs font-bold uppercase tracking-[0.4em] text-slate-400 mb-6 block">La Nostra Storia</span>
-          <h1 className="text-5xl md:text-7xl font-serif text-slate-900 mb-8 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-serif text-slate-900 mb-8">
             Dal 1979, una passione <br /> tramandata tra <span className="italic text-slate-500">generazioni</span>.
           </h1>
         </motion.div>
       </section>
 
-      {/* Prominent Hero Image */}
-      <section className="max-w-7xl mx-auto px-6 mb-32">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="w-full aspect-[16/9] md:aspect-[21/9] rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200/50 relative group"
-        >
+      {/* Story Content with 9:16 Image on the side */}
+      <section className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-start mb-32">
+        
+        {/* Prominent Side Image (9:16 aspect ratio) */}
+        <div className="w-full aspect-[9/16] bg-slate-50 rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200/50 relative group md:sticky md:top-32">
           <img 
             src="/studio ciserani.png" 
             alt="Studio Ciserani Storia e Team" 
@@ -35,19 +32,17 @@ const About = () => {
           <div className="absolute inset-0 hidden items-center justify-center bg-slate-100 text-slate-400 italic">
             [Immagine Studio Ciserani]
           </div>
-        </motion.div>
-      </section>
+        </div>
 
-      {/* Story Content */}
-      <section className="max-w-4xl mx-auto px-6 mb-32">
-        <div className="space-y-16">
+        {/* Text Content */}
+        <div className="space-y-16 pt-8">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col md:flex-row gap-8 items-start bg-slate-50 p-10 rounded-3xl"
+            className="flex flex-col gap-6"
           >
-            <div className="shrink-0 w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-900">
+            <div className="shrink-0 w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-900">
               <History size={32} />
             </div>
             <div>
@@ -62,9 +57,9 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col md:flex-row gap-8 items-start bg-slate-50 p-10 rounded-3xl"
+            className="flex flex-col gap-6"
           >
-            <div className="shrink-0 w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-900">
+            <div className="shrink-0 w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-900">
               <Award size={32} />
             </div>
             <div>
@@ -79,9 +74,9 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col md:flex-row gap-8 items-start bg-slate-50 p-10 rounded-3xl"
+            className="flex flex-col gap-6"
           >
-            <div className="shrink-0 w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-900">
+            <div className="shrink-0 w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-900">
               <Target size={32} />
             </div>
             <div>
