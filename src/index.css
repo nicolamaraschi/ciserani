@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: oklch(0.45 0.12 230);
+  --color-secondary: oklch(0.95 0.02 240);
+  --color-accent: oklch(0.65 0.15 190);
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+.glass-nav {
+  @apply sticky top-0 z-50 backdrop-blur-md bg-white/70 border-b border-slate-200/50;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-slate-900 text-white rounded-full font-medium transition-all hover:bg-slate-800 hover:scale-[1.02] active:scale-[0.98];
+}
+
+.btn-outline {
+  @apply px-6 py-3 border border-slate-200 rounded-full font-medium transition-all hover:bg-slate-50 hover:border-slate-300;
+}
