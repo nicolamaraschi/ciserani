@@ -1,7 +1,25 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Shield, Sparkles, Smile, Scissors, Heart, Activity, Layers, Crosshair } from 'lucide-react';
 
 const Specializations = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [hash]);
+
   const specs = [
     {
       icon: <Shield size={28} />,
@@ -69,6 +87,7 @@ const Specializations = () => {
         {specs.map((spec, index) => (
           <motion.div
             key={index}
+            id={spec.title.toLowerCase().replace(/\s+/g, '-')}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

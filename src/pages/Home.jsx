@@ -29,22 +29,26 @@ const Home = () => {
     {
       title: "Chirurgia Parodontale",
       desc: "Quando le gengive sono infiammate e si ritirano.",
-      path: "/specializzazioni"
+      image: "/Chirurgia Parodontale.png",
+      path: "/specializzazioni#chirurgia-parodontale"
     },
     {
       title: "Implantologia e Protesi",
       desc: "Hai perso uno o più denti? Ritorna a sorridere.",
-      path: "/specializzazioni"
+      image: "/Implantologia e Protesi.png",
+      path: "/specializzazioni#implantologia-e-protesi"
     },
     {
       title: "Ortodonzia Invisibile",
       desc: "Denti storti? Soluzioni discrete e moderne.",
-      path: "/specializzazioni"
+      image: "/Ortodonzia Invisibile.png",
+      path: "/specializzazioni#ortodonzia-invisibile"
     },
     {
       title: "Conservativa Estetica",
       desc: "Ripristiniamo la forma e la struttura del tuo dente.",
-      path: "/specializzazioni"
+      image: "/Conservativa Estetica.png",
+      path: "/specializzazioni#conservativa-estetica"
     }
   ];
 
@@ -127,19 +131,35 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {specializations.map((spec, index) => (
-              <motion.div
+              <Link 
                 key={index}
-                {...fadeIn}
-                transition={{ delay: index * 0.1 }}
-                className="group p-8 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-500 cursor-pointer"
+                to={spec.path}
+                className="group block"
               >
-                <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-slate-900 mb-6 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-500">
-                  <Star size={24} />
-                </div>
-                <h3 className="text-xl font-serif text-slate-900 mb-4">{spec.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed mb-6">{spec.desc}</p>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 group-hover:text-slate-900 transition-colors">Dettagli</span>
-              </motion.div>
+                <motion.div
+                  {...fadeIn}
+                  transition={{ delay: index * 0.1 }}
+                  className="h-full flex flex-col rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-500 overflow-hidden"
+                >
+                  <div className="aspect-[4/3] w-full overflow-hidden relative">
+                    <img 
+                      src={spec.image} 
+                      alt={spec.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-lg shadow-sm flex items-center justify-center text-slate-900 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-500">
+                      <Star size={20} />
+                    </div>
+                  </div>
+                  <div className="p-8">
+                    <h3 className="text-xl font-serif text-slate-900 mb-4">{spec.title}</h3>
+                    <p className="text-sm text-slate-500 leading-relaxed mb-6">{spec.desc}</p>
+                    <div className="flex items-center text-[10px] font-bold uppercase tracking-widest text-slate-400 group-hover:text-slate-900 transition-colors">
+                      Dettagli <ArrowRight size={12} className="ml-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
+                    </div>
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
