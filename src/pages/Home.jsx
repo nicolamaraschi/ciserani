@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Star, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -49,6 +49,27 @@ const Home = () => {
       desc: "Ripristiniamo la forma e la struttura del tuo dente.",
       image: "/Conservativa Estetica.png",
       path: "/specializzazioni#conservativa-estetica"
+    }
+  ];
+
+  const features = [
+    {
+      title: 'Esperienza',
+      description: 'Oltre 40 anni di storia e continua evoluzione tecnologica.',
+      image: '/esperienza.png',
+      alt: 'Esperienza dello studio'
+    },
+    {
+      title: 'Qualità',
+      description: 'Utilizziamo solo i migliori materiali e le tecniche più moderne.',
+      image: '/qualita.png',
+      alt: 'Qualità dei trattamenti'
+    },
+    {
+      title: 'Paziente al Centro',
+      description: 'Piani di cura personalizzati e attenzione al comfort.',
+      image: '/paziente-al-centro.png',
+      alt: 'Paziente al centro del percorso di cura'
     }
   ];
 
@@ -204,27 +225,19 @@ const Home = () => {
       {/* Features */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center text-slate-900 mx-auto mb-8">
-              <img src="/esperienza.png" alt="Esperienza" className="w-8 h-8 object-contain" />
+          {features.map((feature) => (
+            <div key={feature.title} className="text-center">
+              <div className="mb-8 overflow-hidden rounded-[2rem] bg-slate-100 shadow-sm">
+                <img
+                  src={feature.image}
+                  alt={feature.alt}
+                  className="h-56 w-full object-cover"
+                />
+              </div>
+              <h4 className="text-xl font-serif mb-4">{feature.title}</h4>
+              <p className="text-sm text-slate-500 leading-relaxed">{feature.description}</p>
             </div>
-            <h4 className="text-xl font-serif mb-4">Esperienza</h4>
-            <p className="text-sm text-slate-500 leading-relaxed">Oltre 40 anni di storia e continua evoluzione tecnologica.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center text-slate-900 mx-auto mb-8">
-              <img src="/qualita.png" alt="Qualità" className="w-8 h-8 object-contain" />
-            </div>
-            <h4 className="text-xl font-serif mb-4">Qualità</h4>
-            <p className="text-sm text-slate-500 leading-relaxed">Utilizziamo solo i migliori materiali e le tecniche più moderne.</p>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center text-slate-900 mx-auto mb-8">
-              <img src="/paziente-al-centro.png" alt="Paziente al Centro" className="w-8 h-8 object-contain" />
-            </div>
-            <h4 className="text-xl font-serif mb-4">Paziente al Centro</h4>
-            <p className="text-sm text-slate-500 leading-relaxed">Piani di cura personalizzati e attenzione al comfort.</p>
-          </div>
+          ))}
         </div>
       </section>
     </div>
