@@ -206,21 +206,21 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
           <div className="text-center">
             <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center text-slate-900 mx-auto mb-8">
-              <ShieldCheck size={32} />
+              <img src="/esperienza.png" alt="Esperienza" className="w-8 h-8 object-contain" />
             </div>
             <h4 className="text-xl font-serif mb-4">Esperienza</h4>
             <p className="text-sm text-slate-500 leading-relaxed">Oltre 40 anni di storia e continua evoluzione tecnologica.</p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center text-slate-900 mx-auto mb-8">
-              <Star size={32} />
+              <img src="/qualita.png" alt="Qualità" className="w-8 h-8 object-contain" />
             </div>
             <h4 className="text-xl font-serif mb-4">Qualità</h4>
             <p className="text-sm text-slate-500 leading-relaxed">Utilizziamo solo i migliori materiali e le tecniche più moderne.</p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center text-slate-900 mx-auto mb-8">
-              <CheckCircle2 size={32} />
+              <img src="/paziente-al-centro.png" alt="Paziente al Centro" className="w-8 h-8 object-contain" />
             </div>
             <h4 className="text-xl font-serif mb-4">Paziente al Centro</h4>
             <p className="text-sm text-slate-500 leading-relaxed">Piani di cura personalizzati e attenzione al comfort.</p>
