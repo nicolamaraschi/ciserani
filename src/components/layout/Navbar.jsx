@@ -28,23 +28,29 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="flex flex-col">
-          <span className="text-2xl font-serif font-bold tracking-tighter text-slate-900">STUDIO CISERANI</span>
-          <span className="text-[10px] tracking-[0.2em] text-slate-500 uppercase">Eccellenza Odontoiatrica</span>
-        </Link>
+        {/* Logo Container */}
+        <div className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex-1 flex md:justify-start z-10">
+          <Link to="/">
+            <img src="/logoScritta.png" alt="Re Smile Logo" className="h-10 md:h-12 w-auto" style={{ filter: 'drop-shadow(0 0 12px rgba(255, 255, 255, 0.9))' }} />
+          </Link>
+        </div>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8">
+        {/* Desktop Nav - Centered */}
+        <div className="hidden md:flex justify-center items-center space-x-8">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`text-sm font-medium transition-colors hover:text-slate-900 ${location.pathname === link.path ? 'text-slate-900' : 'text-slate-500'}`}
+              className={`font-serif text-[17px] font-bold tracking-wide transition-colors hover:text-slate-900 ${location.pathname === link.path ? 'text-slate-900' : 'text-slate-700'}`}
             >
               {link.name}
             </Link>
           ))}
-          <a href="tel:02427289" className="flex items-center space-x-2 bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-slate-800 transition-all">
+        </div>
+
+        {/* Call to Action - Right aligned on Desktop */}
+        <div className="hidden md:flex flex-1 justify-end">
+          <a href="tel:02427289" className="flex items-center space-x-2 bg-slate-900 text-white px-6 py-3 rounded-full text-base font-semibold hover:bg-slate-800 transition-all">
             <Phone size={16} />
             <span>02.427289</span>
           </a>
@@ -71,7 +77,7 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-lg font-medium ${location.pathname === link.path ? 'text-slate-900' : 'text-slate-500'}`}
+                  className={`font-serif text-xl font-bold ${location.pathname === link.path ? 'text-slate-900' : 'text-slate-500'}`}
                 >
                   {link.name}
                 </Link>

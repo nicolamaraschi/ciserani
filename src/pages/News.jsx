@@ -10,7 +10,7 @@ const News = () => {
     },
     {
       date: "14 Marzo 2023",
-      title: "Invisalign - Studio Dentistico Ciserani",
+      title: "Invisalign - Re Smile",
       excerpt: "Scopri come raddrizzare i tuoi denti in modo invisibile con il sistema Invisalign, di cui siamo provider ufficiali."
     },
     {
@@ -21,7 +21,7 @@ const News = () => {
     {
       date: "4 Giugno 2019",
       title: "I disegni dei nostri piccoli pazienti",
-      excerpt: "Lo Studio Dentistico Ciserani ha chiesto ai nostri piccoli pazienti di realizzare un disegno per decorare lo studio."
+      excerpt: "Re Smile ha chiesto ai nostri piccoli pazienti di realizzare un disegno per decorare lo studio."
     }
   ];
 

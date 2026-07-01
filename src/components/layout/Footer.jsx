@@ -6,19 +6,18 @@ const Footer = () => {
     <footer className="bg-slate-50 border-t border-slate-200 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Brand & Social */}
-        <div className="space-y-6">
-          <Link to="/" className="flex flex-col">
-            <span className="text-xl font-serif font-bold tracking-tighter text-slate-900">STUDIO CISERANI</span>
-            <span className="text-[9px] tracking-[0.2em] text-slate-500 uppercase">Milano</span>
+        <div className="space-y-6 flex flex-col items-center md:items-start text-center md:text-left">
+          <Link to="/" className="flex flex-col items-center md:items-start gap-1">
+            <img src="/logo.png" alt="Re Smile Logo" className="h-56 md:h-64 w-auto" />
           </Link>
           <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
             Ricerca dell’eccellenza estetica applicata alla salute in ogni branca dell’odontoiatria dal 1979.
           </p>
-          <div className="flex space-x-4">
-            <a href="https://www.instagram.com/studio_ciserani/" target="_blank" rel="noreferrer" className="p-2 bg-white rounded-full border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors">
+          <div className="flex space-x-4 justify-center md:justify-start">
+            <a href="https://www.instagram.com/studio_drciserani/" target="_blank" rel="noreferrer" className="p-2 bg-white rounded-full border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors">
               <Instagram size={18} />
             </a>
-            <a href="https://www.facebook.com/ciseraniroberto/" target="_blank" rel="noreferrer" className="p-2 bg-white rounded-full border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors">
+            <a href="https://www.facebook.com/ciseraniroberto/?locale=it_IT" target="_blank" rel="noreferrer" className="p-2 bg-white rounded-full border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors">
               <Facebook size={18} />
             </a>
           </div>
@@ -71,7 +70,7 @@ const Footer = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 mt-20 pt-10 border-t border-slate-200 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-[11px] text-slate-400 uppercase tracking-widest gap-4">
-        <p>© {new Date().getFullYear()} Studio Ciserani S.r.l. – P.IVA 10663200151</p>
+        <p>© {new Date().getFullYear()} Re Smile S.r.l. – P.IVA 10663200151</p>
         <p>Iscrizione Ordine Provinciale Medici e Odontoiatri n. 1660</p>
       </div>
     </footer>

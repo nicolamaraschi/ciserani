@@ -95,7 +95,7 @@ const Team = () => {
           <div className="bg-slate-50 aspect-video rounded-[3rem] overflow-hidden">
             <img 
               src="/team.png" 
-              alt="Team Studio Ciserani" 
+              alt="Team Re Smile" 
               className="w-full h-full object-cover"
               onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
             />

@@ -25,12 +25,12 @@ const About = () => {
         <div className="w-full aspect-[9/16] bg-slate-50 rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200/50 relative group md:sticky md:top-32">
           <img 
             src="/studio ciserani.png" 
-            alt="Studio Ciserani Storia e Team" 
+            alt="Re Smile Storia e Team" 
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
           />
           <div className="absolute inset-0 hidden items-center justify-center bg-slate-100 text-slate-400 italic">
-            [Immagine Studio Ciserani]
+            [Immagine Re Smile]
           </div>
         </div>
 
@@ -48,7 +48,7 @@ const About = () => {
             <div>
               <h3 className="text-2xl font-serif mb-4 text-slate-900">Le Origini</h3>
               <p className="text-slate-500 leading-relaxed text-lg">
-                Era il 1979 quando è nata l’avventura dello Studio Ciserani. Il padre Paolo, dopo anni di lavoro come odontotecnico e raggiunta la laurea in medicina, ha messo a frutto la sua formazione protesica per risolvere le situazioni dentali più complesse, diventando presto un punto di riferimento nel quartiere.
+                Era il 1979 quando è nata l'avventura di Re Smile. Il padre Paolo, dopo anni di lavoro come odontotecnico e raggiunta la laurea in medicina, ha messo a frutto la sua formazione protesica per risolvere le situazioni dentali più complesse, diventando presto un punto di riferimento nel quartiere.
               </p>
             </div>
           </motion.div>

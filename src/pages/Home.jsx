@@ -111,7 +111,7 @@ const Home = () => {
               Ricerca dell’eccellenza <span className="italic text-slate-500">estetica</span>
             </h1>
             <p className="text-xl text-slate-700 leading-relaxed mb-10 max-w-lg mx-auto md:mx-0">
-              Applicata alla salute in ogni branca dell’odontoiatria. Benvenuti nello Studio Ciserani.
+              Applicata alla salute in ogni branca dell’odontoiatria. Benvenuti in Re Smile.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link to="/contatti" className="btn-primary flex items-center justify-center group">

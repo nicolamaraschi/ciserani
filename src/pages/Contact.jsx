@@ -59,7 +59,7 @@ const Contact = () => {
               <div className="flex items-start space-x-4">
                 <MapPin size={24} className="text-slate-900 shrink-0" />
                 <p className="text-slate-600 leading-relaxed">
-                  Studio Ciserani S.r.l.<br />
+                  Re Smile S.r.l.<br />
                   Via degli Zuccaro, 5<br />
                   20146 Milano
                 </p>
@@ -113,7 +113,7 @@ const Contact = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Mappa Studio Ciserani"
+              title="Mappa Re Smile"
               className="grayscale group-hover:grayscale-0 transition-all duration-700"
             ></iframe>
           </div>
