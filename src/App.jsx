@@ -8,10 +8,12 @@ import Team from './pages/Team';
 import News from './pages/News';
 import Contact from './pages/Contact';
 import Lavori from './pages/Lavori';
+import ScrollToTop from './components/layout/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
