@@ -46,13 +46,6 @@ const Lavori = () => {
       title: "Estetica Dentale Avanzata",
       description: "Rifacimento completo del sorriso con attenzione scrupolosa ai dettagli estetici.",
       image: "/primaDopo3.jpg"
-    },
-    {
-      id: 6,
-      type: 'image',
-      title: "Soluzioni Protesiche",
-      description: "Integrazione perfetta tra estetica e funzionalità con materiali di ultima generazione.",
-      image: "/primaDopo4.jpg"
     }
   ];
 
