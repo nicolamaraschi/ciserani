@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Star, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BeforeAfterSlider from '../components/ui/BeforeAfterSlider';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -182,6 +183,38 @@ const Home = () => {
                 </motion.div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* I Nostri Lavori */}
+      <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div className="max-w-2xl">
+              <h2 className="text-4xl font-serif text-slate-900 mb-6">I nostri lavori</h2>
+              <p className="text-slate-500 text-lg">Scopri la differenza prima e dopo i nostri trattamenti d'eccellenza. Il tuo sorriso, trasformato.</p>
+            </div>
+            <Link to="/i-nostri-lavori" className="text-sm font-bold uppercase tracking-widest text-slate-900 flex items-center group">
+              Vedi tutti <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <motion.div
+              {...fadeIn}
+              transition={{ delay: 0.1 }}
+              className="flex flex-col"
+            >
+              <BeforeAfterSlider beforeImage="/slider1a.png" afterImage="/slider1b.png" />
+            </motion.div>
+            <motion.div
+              {...fadeIn}
+              transition={{ delay: 0.2 }}
+              className="flex flex-col"
+            >
+              <BeforeAfterSlider beforeImage="/slider2a.png" afterImage="/slider2b.png" />
+            </motion.div>
           </div>
         </div>
       </section>

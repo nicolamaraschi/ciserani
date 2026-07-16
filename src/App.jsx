@@ -7,6 +7,7 @@ import Specializations from './pages/Specializations';
 import Team from './pages/Team';
 import News from './pages/News';
 import Contact from './pages/Contact';
+import Lavori from './pages/Lavori';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/specializzazioni" element={<Specializations />} />
             <Route path="/team" element={<Team />} />
             <Route path="/news" element={<News />} />
+            <Route path="/i-nostri-lavori" element={<Lavori />} />
             <Route path="/contatti" element={<Contact />} />
           </Routes>
         </main>
