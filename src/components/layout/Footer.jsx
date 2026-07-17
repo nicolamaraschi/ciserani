@@ -6,18 +6,18 @@ const Footer = () => {
     <footer className="bg-slate-50 border-t border-slate-200 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Brand & Social */}
-        <div className="space-y-6 flex flex-col items-center md:items-start text-center md:text-left">
-          <Link to="/" className="flex flex-col items-center md:items-start gap-1">
-            <img src="/logo.png" alt="Re Smile Logo" className="h-56 md:h-64 w-auto" />
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <Link to="/" className="mb-6 inline-block">
+            <img src="/logo.png" alt="Re Smile Logo" className="h-24 md:h-28 w-auto object-contain" />
           </Link>
-          <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
+          <p className="text-sm text-slate-500 leading-relaxed max-w-xs mb-8">
             Ricerca dell’eccellenza estetica applicata alla salute in ogni branca dell’odontoiatria dal 1979.
           </p>
           <div className="flex space-x-4 justify-center md:justify-start">
-            <a href="https://www.instagram.com/studio_drciserani/" target="_blank" rel="noreferrer" className="p-2 bg-white rounded-full border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors">
+            <a href="https://www.instagram.com/studio_drciserani/" target="_blank" rel="noreferrer" className="p-2.5 bg-white rounded-full border border-slate-200 text-slate-400 hover:text-slate-900 hover:border-slate-300 transition-all shadow-sm">
               <Instagram size={18} />
             </a>
-            <a href="https://www.facebook.com/ciseraniroberto/?locale=it_IT" target="_blank" rel="noreferrer" className="p-2 bg-white rounded-full border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors">
+            <a href="https://www.facebook.com/ciseraniroberto/?locale=it_IT" target="_blank" rel="noreferrer" className="p-2.5 bg-white rounded-full border border-slate-200 text-slate-400 hover:text-slate-900 hover:border-slate-300 transition-all shadow-sm">
               <Facebook size={18} />
             </a>
           </div>
@@ -25,8 +25,8 @@ const Footer = () => {
 
         {/* Links */}
         <div>
-          <h4 className="text-sm font-bold uppercase tracking-wider text-slate-900 mb-6">Navigazione</h4>
-          <ul className="space-y-4 text-sm text-slate-500">
+          <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-900 mb-6">Navigazione</h4>
+          <ul className="space-y-3 text-sm text-slate-500">
             <li><Link to="/chi-siamo" className="hover:text-slate-900 transition-colors">Chi Siamo</Link></li>
             <li><Link to="/specializzazioni" className="hover:text-slate-900 transition-colors">Specializzazioni</Link></li>
             <li><Link to="/team" className="hover:text-slate-900 transition-colors">Team</Link></li>
@@ -37,8 +37,8 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h4 className="text-sm font-bold uppercase tracking-wider text-slate-900 mb-6">Contatti</h4>
-          <ul className="space-y-4 text-sm text-slate-500">
+          <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-900 mb-6">Contatti</h4>
+          <ul className="space-y-3 text-sm text-slate-500">
             <li className="flex items-start space-x-3">
               <MapPin size={18} className="text-slate-400 mt-0.5 shrink-0" />
               <span>Via degli Zuccaro, 5<br />20146 Milano</span>
@@ -56,8 +56,8 @@ const Footer = () => {
 
         {/* Hours */}
         <div>
-          <h4 className="text-sm font-bold uppercase tracking-wider text-slate-900 mb-6">Orari Studio</h4>
-          <ul className="space-y-4 text-sm text-slate-500">
+          <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-900 mb-6">Orari Studio</h4>
+          <ul className="space-y-3 text-sm text-slate-500">
             <li className="flex items-start space-x-3">
               <Clock size={18} className="text-slate-400 mt-0.5 shrink-0" />
               <div>
