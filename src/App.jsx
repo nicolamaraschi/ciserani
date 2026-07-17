@@ -9,6 +9,7 @@ import News from './pages/News';
 import Contact from './pages/Contact';
 import Lavori from './pages/Lavori';
 import ScrollToTop from './components/layout/ScrollToTop';
+import WhatsAppButton from './components/ui/WhatsAppButton';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <WhatsAppButton />
       </div>
     </Router>
   );
