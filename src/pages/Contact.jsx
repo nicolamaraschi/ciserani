@@ -52,9 +52,9 @@ const Contact = () => {
         </div>
 
         {/* Info Column */}
-        <div className="space-y-12">
-          {/* Mappa */}
-          <div className="aspect-video bg-slate-100 rounded-3xl overflow-hidden border border-slate-100 relative group shadow-sm">
+        <div className="flex flex-col h-full">
+          {/* Mappa Grande */}
+          <div className="w-full h-[320px] rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100 mb-12">
             <iframe
               src="https://www.google.com/maps?q=Via+degli+Zuccaro+5,+Milano&output=embed"
               width="100%"
@@ -64,80 +64,86 @@ const Contact = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Mappa Re Smile"
-              className="grayscale group-hover:grayscale-0 transition-all duration-700"
             ></iframe>
           </div>
 
-          {/* Come Raggiungerci (Key Points) */}
-          <div>
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Come Raggiungerci & Orari</h4>
-            <div className="bg-slate-900 text-white p-8 md:p-10 rounded-3xl grid grid-cols-1 md:grid-cols-2 gap-10 shadow-lg">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+            {/* Colonna Sinistra Info */}
+            <div className="space-y-10">
               <div>
-                <h5 className="font-bold text-sm mb-5 flex items-center gap-2">
-                  <MapPin size={18} className="text-slate-400" /> Fermate più vicine
-                </h5>
-                <ul className="text-sm text-slate-300 space-y-4">
-                  <li className="flex items-center gap-4">
-                    <span className="bg-white/10 px-3 py-1 rounded-full text-xs font-bold tracking-wider">BUS 50</span>
-                    <span>Piazza Frattini</span>
-                  </li>
-                  <li className="flex items-center gap-4">
-                    <span className="bg-white/10 px-3 py-1 rounded-full text-xs font-bold tracking-wider">BUS 61</span>
-                    <span>Piazza Napoli / Tolstoj</span>
-                  </li>
-                  <li className="flex items-center gap-4">
-                    <span className="bg-white/10 px-3 py-1 rounded-full text-xs font-bold tracking-wider">TRAM 14</span>
-                    <span>Giambellino / Tolstoj</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="font-bold text-sm mb-5 flex items-center gap-2">
-                  <Clock size={18} className="text-slate-400" /> Orari Studio
-                </h5>
-                <ul className="text-sm text-slate-300 space-y-4">
-                  <li className="flex flex-col">
-                    <span className="text-slate-400 text-xs uppercase tracking-wider mb-1">Lunedì – Venerdì</span>
-                    <span className="font-medium">14.00 – 19.30</span>
-                  </li>
-                  <li className="flex flex-col">
-                    <span className="text-slate-400 text-xs uppercase tracking-wider mb-1">Martedì – Giovedì</span>
-                    <span className="font-medium">9.00 – 12.30 / 14.00 – 19.30</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Indirizzo e Contatti */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 bg-slate-50 p-8 rounded-3xl">
-            <div>
-              <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Indirizzo</h4>
-              <div className="flex items-start space-x-4">
-                <MapPin size={24} className="text-slate-900 shrink-0" />
-                <p className="text-slate-600 leading-relaxed">
+                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">Indirizzo</h4>
+                <p className="text-lg text-slate-900 leading-relaxed font-serif">
                   Re Smile S.r.l.<br />
                   Via degli Zuccaro, 5<br />
                   20146 Milano
                 </p>
               </div>
+
+              <div>
+                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">Come Raggiungerci</h4>
+                <ul className="space-y-4">
+                  <li className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
+                      <span className="text-slate-900 font-bold text-xs">50</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[10px] text-slate-500 uppercase tracking-widest">Bus</span>
+                      <span className="text-slate-900 font-medium text-sm">Piazza Frattini</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
+                      <span className="text-slate-900 font-bold text-xs">61</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[10px] text-slate-500 uppercase tracking-widest">Bus</span>
+                      <span className="text-slate-900 font-medium text-sm">Largo Giambellino</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
+                      <span className="text-slate-900 font-bold text-xs">14</span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[10px] text-slate-500 uppercase tracking-widest">Tram</span>
+                      <span className="text-slate-900 font-medium text-sm">Lorenteggio</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Contatti Diretti</h4>
-              <ul className="space-y-4">
-                <li className="flex items-center space-x-4">
-                  <Phone size={20} className="text-slate-900 shrink-0" />
-                  <a href="tel:02427289" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">02.427289</a>
-                </li>
-                <li className="flex items-center space-x-4">
-                  <Mail size={20} className="text-slate-900 shrink-0" />
-                  <a href="mailto:info@studiociserani.it" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">info@studiociserani.it</a>
-                </li>
-              </ul>
+
+            {/* Colonna Destra Info */}
+            <div className="space-y-10">
+              <div>
+                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">Contatti</h4>
+                <ul className="space-y-4">
+                  <li>
+                    <a href="tel:02427289" className="text-xl text-slate-900 hover:text-slate-500 transition-colors font-serif block">02.427289</a>
+                  </li>
+                  <li>
+                    <a href="mailto:info@studiociserani.it" className="text-[15px] text-slate-900 hover:text-slate-500 transition-colors border-b border-slate-200 hover:border-slate-500 pb-1">info@studiociserani.it</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">Orari Studio</h4>
+                <ul className="space-y-4">
+                  <li className="flex flex-col">
+                    <span className="text-[10px] text-slate-500 uppercase tracking-widest mb-1">Lunedì – Venerdì</span>
+                    <span className="text-slate-900 font-medium text-sm">14.00 – 19.30</span>
+                  </li>
+                  <li className="flex flex-col">
+                    <span className="text-[10px] text-slate-500 uppercase tracking-widest mb-1">Martedì – Giovedì</span>
+                    <span className="text-slate-900 font-medium text-sm">9.00 – 12.30<br/>14.00 – 19.30</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           
-          <div className="text-[10px] text-slate-400 uppercase tracking-widest text-center pt-4">
+          <div className="text-[10px] text-slate-300 uppercase tracking-[0.2em] mt-auto pt-12">
             P.IVA 10663200151 | Ordine Medici Milano n. 1660
           </div>
         </div>
