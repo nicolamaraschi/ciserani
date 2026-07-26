@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Brand & Social */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <Link to="/" className="mb-6 inline-block">
-            <img src="/logo.png" alt="Re Smile Logo" className="h-24 md:h-28 w-auto object-contain" />
+            <img src="/logo-cropped.png" alt="Re Smile Logo" className="h-20 md:h-24 w-auto object-contain" />
           </Link>
           <p className="text-sm text-slate-500 leading-relaxed max-w-xs mb-8">
             Ricerca dell’eccellenza estetica applicata alla salute in ogni branca dell’odontoiatria dal 1979.
