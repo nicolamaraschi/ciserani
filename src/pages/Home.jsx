@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Star, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BeforeAfterSlider from '../components/ui/BeforeAfterSlider';
+import TrustindexWidget from '../components/ui/TrustindexWidget';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -252,6 +253,19 @@ const Home = () => {
               <img src="/invisalign_promo.jpg" alt="Invisalign" className="w-full h-full object-cover opacity-80" />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-slate-200 text-xs font-bold uppercase tracking-widest text-slate-600 mb-6">Testimonianze</span>
+            <h2 className="text-4xl font-serif text-slate-900 mb-6">Cosa dicono di noi</h2>
+            <p className="text-slate-500 text-lg max-w-2xl mx-auto">La soddisfazione dei nostri pazienti è il nostro miglior biglietto da visita.</p>
+          </div>
+          
+          <TrustindexWidget />
         </div>
       </section>
 
