@@ -32,15 +32,23 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled || isOpen ? 'bg-white/95 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-2'}`}>
-      <div className="max-w-7xl w-full mx-auto px-6 min-h-[70px] flex justify-between items-center relative">
+      <div className="max-w-7xl w-full mx-auto px-6 h-[70px] flex justify-between items-center relative">
         {/* Logo Container */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0 flex-1 flex md:justify-start z-10">
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/logo-cropped.png" 
-              alt="Re Smile Logo" 
-              className={`w-auto object-contain transition-all duration-300 ${scrolled || isOpen ? 'h-12' : 'h-14 md:h-16'} p-1`} 
-              style={{ filter: 'drop-shadow(0 0 12px rgba(255, 255, 255, 0.9))' }} 
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0 flex-1 flex md:justify-start md:items-center z-10">
+          <Link
+            to="/"
+            className={`flex items-center transition-all duration-300 ${
+              scrolled || isOpen
+                ? 'p-0 bg-transparent shadow-none'
+                : 'bg-white/85 backdrop-blur-md shadow-sm border border-white/80 rounded-full px-3.5 py-1.5 md:px-4 md:py-1.5'
+            }`}
+          >
+            <img
+              src="/logoScritta.png"
+              alt="Re Smile"
+              className={`w-auto object-contain transition-all duration-300 ${
+                scrolled || isOpen ? 'h-8 md:h-9' : 'h-8 md:h-10'
+              }`}
             />
           </Link>
         </div>

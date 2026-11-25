@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Star, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BeforeAfterSlider from '../components/ui/BeforeAfterSlider';
-import TrustindexWidget from '../components/ui/TrustindexWidget';
+import GoogleReviewsWidget from '../components/ui/GoogleReviewsWidget';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -101,12 +101,12 @@ const Home = () => {
           </AnimatePresence>
         </div>
         
-        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full text-center md:text-left">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full flex flex-col md:flex-row items-center justify-between gap-10">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-2xl mx-auto md:mx-0"
+            className="max-w-2xl mx-auto md:mx-0 text-center md:text-left order-2 md:order-1"
           >
             <span className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-slate-600 mb-6 bg-white/50 px-4 py-1 rounded-full backdrop-blur-sm">Eccellenza Milanese dal 1979</span>
             <h1 className="text-5xl md:text-7xl font-serif text-slate-900 leading-tight mb-8">
@@ -124,6 +124,21 @@ const Home = () => {
                 Scopri le specializzazioni
               </Link>
             </div>
+          </motion.div>
+
+          {/* Hero Center/Right Logo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+            className="order-1 md:order-2 flex justify-center items-center md:flex-1"
+          >
+            <img
+              src="/logo-cropped.png"
+              alt="Re Smile Logo"
+              className="h-36 sm:h-44 md:h-64 lg:h-72 w-auto object-contain"
+              style={{ filter: 'drop-shadow(0 6px 24px rgba(255, 255, 255, 0.9))' }}
+            />
           </motion.div>
         </div>
 
@@ -220,16 +235,16 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Invisalign Banner */}
+      {/* Invisalign & Spark Ormco Banner */}
       <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 translate-x-1/2"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-16">
             <div className="flex-1">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-xs font-bold uppercase tracking-widest mb-8">Provider Ufficiale</span>
-              <h2 className="text-4xl md:text-5xl font-serif mb-8">Invisalign®</h2>
+              <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-xs font-bold uppercase tracking-widest mb-8">Provider Ufficiali</span>
+              <h2 className="text-4xl md:text-5xl font-serif mb-8">Invisalign® & Spark™ Ormco</h2>
               <p className="text-lg text-slate-300 mb-10 leading-relaxed">
-                Siamo provider ufficiali per l'ortodonzia invisibile. Raddrizza i tuoi denti in modo discreto, comodo e predicibile con la tecnologia leader nel mondo.
+                Siamo provider ufficiali per l'ortodonzia invisibile con i sistemi Invisalign® e Spark™ di Ormco. Raddrizza i tuoi denti in modo discreto, comodo e predicibile con le tecnologie leader nel mondo.
               </p>
               <ul className="space-y-4 mb-10">
                 <li className="flex items-center space-x-3">
@@ -250,7 +265,7 @@ const Home = () => {
               </Link>
             </div>
             <div className="flex-1 w-full aspect-square bg-white/5 rounded-3xl border border-white/10 overflow-hidden">
-              <img src="/invisalign_promo.jpg" alt="Invisalign" className="w-full h-full object-cover opacity-80" />
+              <img src="/invisalign_promo.jpg" alt="Invisalign e Spark Ormco" className="w-full h-full object-cover opacity-80" />
             </div>
           </div>
         </div>
@@ -265,7 +280,7 @@ const Home = () => {
             <p className="text-slate-500 text-lg max-w-2xl mx-auto">La soddisfazione dei nostri pazienti è il nostro miglior biglietto da visita.</p>
           </div>
           
-          <TrustindexWidget />
+          <GoogleReviewsWidget />
         </div>
       </section>
 

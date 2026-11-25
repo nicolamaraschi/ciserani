@@ -37,7 +37,7 @@ const Specializations = () => {
       icon: <Sparkles size={28} />,
       title: "Ortodonzia Invisibile",
       image: "/Ortodonzia Invisibile.png",
-      content: "Grazie all’ortodonzia invisibile puoi finalmente avere il sorriso che hai sempre sognato senza rinunce, utilizzando allineatori trasparenti e rimovibili."
+      content: "Grazie all’ortodonzia invisibile con allineatori trasparenti e rimovibili Invisalign® e Spark™ di Ormco, puoi finalmente avere il sorriso che hai sempre sognato senza rinunce."
     },
     {
       icon: <Smile size={28} />,
